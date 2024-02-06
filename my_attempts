@@ -1,0 +1,14 @@
+1. select * from fournisseurs;
+2. select fno, nom from fournisseurs;
+3. select distinct design from produits;
+4. select * from produits where poids>15;
+5. select distinct design from produits where poids>15;
+6. select * from produits where poids>15 and poids <40;
+7. select * from fournisseurs where ville = 'Lille' or ville = 'Lyon' or ville = 'Nice';
+8. select * from produits where poids < 15 or poids > 35;
+9. select nom from fournisseurs where nom not like 'D%';
+10. select * from fournisseurs where adresse is NULL;
+11. select * from fournisseurs where adresse is not NULL;
+12. select * from produits where couleur like 'bleu' or couleur like 'rouge' or couleur like 'vert' order by couleur desc;
+13. select pno as 'product_number',	couleur as 'product_color' from produits;
+14. 
