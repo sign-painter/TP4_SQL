@@ -12,3 +12,14 @@
 12. select * from produits where couleur like 'bleu' or couleur like 'rouge' or couleur like 'vert' order by couleur desc;
 13. select pno as 'product_number',	couleur as 'product_color' from produits;
 14. 
+15. select f.nom, c.pno, c.qute from fournisseurs as f join commandes as c on f.fno = c.fno 
+16. select c.cno as "command_number", c.fno as "fournisseur_number",c.qute as "quantity" from commandes as c;
+17. select f.nom, p.design from fournisseurs f , produits p, commandes c where c.fno = f.fno and c.pno = p.pno
+18. 
+19. select distinct c.qute, p.pno from produits p, commandes c where c.pno = p.pno
+20. 
+21. select p.prix, p.pno , prix * 1.206 as "prix" from produits p
+22. 
+23. select SUM(qute) as "total quantity" from commandes where qute>1;
+24. select SUM(qute) as "total quantity" from commandes where qute>1;
+25. select  count(distinct nom) as "total_nom_different" from fournisseurs f 
