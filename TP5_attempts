@@ -1,0 +1,18 @@
+1. select Titre from film order by Titre
+2. select nom, Annee_naissance  from artiste where Annee_naissance < 1950 order by Annee_naissance 
+3. select Arrondissement from cinema where Arrondissement = 12
+4. select nom from artiste a where nom like 'H%'
+5. select nom from artiste a  where Annee_naissance is null 
+6. select count(Nom_Role) from role where Nom_Role = "McLane" and Nom_acteur = "Willis"
+7. select a.Nom, a.Prenom from artiste as a join role as r on r.Nom_role = "Tarzan" and r.Nom_acteur = a.Nom
+8. select distinct a.Nom, a.Prenom from artiste as a, film as f join role as r on r.ID_film = 65 where r.Nom_acteur = a.Nom 
+9. select f.titre, s.Heure_debut from seance as s join film as f where s.ID_film = f.ID_film and s.Nom_cinema = "Kino"
+10.select f.Titre from film as f join role as r where r.ID_film = f.ID_film and r.Nom_acteur = "Allen"
+11. 
+
+NOTE : select 
+join
+on
+join
+on
+where
