@@ -8,7 +8,48 @@
 8. select distinct a.Nom, a.Prenom from artiste as a, film as f join role as r on r.ID_film = 65 where r.Nom_acteur = a.Nom 
 9. select f.titre, s.Heure_debut from seance as s join film as f where s.ID_film = f.ID_film and s.Nom_cinema = "Kino"
 10.select f.Titre from film as f join role as r where r.ID_film = f.ID_film and r.Nom_acteur = "Allen"
-11. 
+11/12. select r.Nom_acteur ,r.Nom_Role, f.Titre from role as r join film as f where f.Nom_Realisateur = r.Nom_acteur 
+
+13. select distinct  s.Nom_cinema ,s.Heure_debut, c.Adresse
+from seance as s
+inner join cinema as c
+on c.Nom_cinema = s.Nom_cinema 
+left join film as f
+on s.ID_film = 7
+
+14. ????
+
+15. select distinct c.Nom_cinema, f.ID_film 
+from cinema as c, film as f
+join seance as s
+on s.ID_film = f.ID_film 
+where f.Nom_Realisateur  like 'Eastwood'
+
+16. select distinct se.Nom_cinema , se.No_salle ,se.Heure_debut , f.titre 
+from seance se
+join salle sa
+on se.Nom_cinema = sa.Nom_cinema 
+join cinema as c
+on c.Nom_cinema = se.Nom_cinema 
+join film f 
+on f.ID_film = se.ID_film 
+where sa.Climatise like 'O' 
+and c.Arrondissement like '12'
+
+17. select distinct s.Nom_cinema , c.Arrondissement , c.Adresse , f.Titre  
+from salle s
+join cinema c 
+on c.Nom_cinema = s.Nom_cinema 
+join seance se
+on se.Nom_cinema = c.Nom_cinema 
+join film f  
+on f.ID_film = se.ID_film 
+where s.Capacite > 150 
+and f.Nom_Realisateur like "Hunt"
+
+18. 
+
+
 
 NOTE : select 
 join
